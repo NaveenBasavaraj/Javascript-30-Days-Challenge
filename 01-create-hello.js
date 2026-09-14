@@ -55,18 +55,18 @@ console.log(f({}, null, 42)); // "Hello World" (extra args ignored)
 ------------------------------------------------------------- */
 
 /* --------------------------------------------------------
-       CONCEPT 2: First-Class Functions & Higher-Order Functions
-       --------------------------------------------------------
-       In JS, functions are "first-class citizens" — they can be:
-         1. Assigned to variables
-         2. Passed as arguments
-         3. RETURNED from other functions   <-- this is our case
- 
-       A function that returns another function (or accepts one)
-       is called a HIGHER-ORDER FUNCTION.
-       createHelloWorld is higher-order because it returns a
-       brand new function every time it's called.
-    ---------------------------------------------------------- */
+    CONCEPT 2: First-Class Functions & Higher-Order Functions
+    --------------------------------------------------------
+    In JS, functions are "first-class citizens" — they can be:
+        1. Assigned to variables
+        2. Passed as arguments
+        3. RETURNED from other functions   <-- this is our case
+
+    A function that returns another function (or accepts one)
+    is called a HIGHER-ORDER FUNCTION.
+    createHelloWorld is higher-order because it returns a
+    brand new function every time it's called.
+---------------------------------------------------------- */
  
 /* --------------------------------------------------------
     CONCEPT 3: Closures
@@ -80,13 +80,13 @@ console.log(f({}, null, 42)); // "Hello World" (extra args ignored)
     Example to build intuition (not part of the LeetCode
     answer, just to see closures in action):
 
-        var createGreeter = function(name) {
-            return function() {
-                return "Hello " + name;   // "name" is closed over
-            };
+    var createGreeter = function(name) {
+        return function() {
+            return "Hello " + name;   // "name" is closed over
         };
-        const greetNaveen = createGreeter("Naveen");
-        greetNaveen(); // "Hello Naveen" — remembers "name" forever
+    };
+    const greetNaveen = createGreeter("Naveen");
+    greetNaveen(); // "Hello Naveen" — remembers "name" forever
 ---------------------------------------------------------- */
 
 /* --------------------------------------------------------
@@ -104,6 +104,7 @@ console.log(f({}, null, 42)); // "Hello World" (extra args ignored)
 
     NOTE: Rest params must be the LAST parameter, and there
     can only be one.
+    
         function ok(a, b, ...rest) {}   // valid
         function bad(...rest, a) {}     // ❌ SyntaxError
 ---------------------------------------------------------- */

@@ -19,7 +19,13 @@ section('Exercise 1 — firstAndLast');
  * firstAndLast(['a','b','c']) -> ['a','c']
  * Do NOT hardcode index 2 — it must work for any length.       */
 function firstAndLast(arr) {
-  // your code here
+  if (arr.length === 0) return [];
+  const result = []
+  result.push(arr[0])
+  result.push(arr[arr.length - 1])
+  return result
+  // return [arr[0], arr[arr.length-1]]
+  // return [arr.at(0), arr.at(-1)]
 }
 check('firstAndLast(3 items)', firstAndLast(['a', 'b', 'c']), ['a', 'c']);
 check('firstAndLast(1 item)', firstAndLast([7]), [7, 7]);
@@ -29,6 +35,7 @@ section('Exercise 2 — secondToLast (use .at)');
  * secondToLast([10, 20, 30, 40]) -> 30                          */
 function secondToLast(arr) {
   // your code here
+  return arr.at(-2)
 }
 check('secondToLast', secondToLast([10, 20, 30, 40]), 30);
 check('secondToLast 2 items', secondToLast(['x', 'y']), 'x');
@@ -41,6 +48,10 @@ section('Exercise 3 — describe');
  * Use a template literal (backticks).                           */
 function describe(arr) {
   // your code here
+  // if (arr.length === 0) {
+  //   return "0 items, first is undefined";
+  // }
+  return `${arr.length} items, first is ${arr.at(0)}`
 }
 check('describe', describe(['x', 'y']), '2 items, first is x');
 

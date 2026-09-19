@@ -33,7 +33,7 @@ function secondToLast(arr) {
 check('secondToLast', secondToLast([10, 20, 30, 40]), 30);
 check('secondToLast 2 items', secondToLast(['x', 'y']), 'x');
 // String(...) so an unwritten function cannot pass by accident:
-check('secondToLast too short', () => String(secondToLast([1])), 'undefined');
+check('secondToLast too short', () => String(secondToLast([1])), 'undefined', secondToLast);
 
 section('Exercise 3 — describe');
 /* Return the string "<length> items, first is <first>".

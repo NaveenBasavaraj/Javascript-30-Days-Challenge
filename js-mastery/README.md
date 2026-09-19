@@ -74,10 +74,10 @@ Order matters. The exercises assume the file before them.
 | # | Topic | Status |
 |---|---|---|
 | 01 | **Arrays** — creation, mutation, iteration, search, map/filter/reduce, sorting, nesting, spread, copies, sets, modern methods, 40 challenges | **ready — 383 checks** |
-| 02 | Strings & regex | unlocked when 01 is done |
-| 03 | Objects, Maps & JSON | |
-| 04 | Functions, scope & closures | |
-| 05 | `this`, classes & prototypes | |
+| 02 | **Objects, Maps & JSON** — access, destructuring, spread vs deep copy, arrays of objects, Map/Set, JSON traps, immutable state, 40 challenges | **ready — 359 checks** |
+| 03 | **Functions, Scope & Closures** — hoisting, scope, TDZ, closures, HOFs, currying, `this`/bind, recursion, debounce/throttle, 40 challenges | **ready — 389 checks** |
+| 04 | **Strings & Regex** — reading, slicing, templates & tagged templates, unicode, then regex from `test` to lookahead, 60 challenges | **ready — 463 checks** |
+| 05 | **Classes & Prototypes** — factories, `new`, the prototype chain, class syntax, private fields, inheritance, polymorphism, protocols, mixins, custom errors, 50 challenges | **ready — 495 checks** |
 | 06 | Async: callbacks → promises → async/await | |
 | 07 | Errors & debugging | |
 | 08 | Modules, tooling & Node basics | |
@@ -104,6 +104,73 @@ worth more than three topics skimmed.
 | `11-sets-maps-and-conversions` | dedupe, set ops, `Object.entries`, array-likes |
 | `12-modern-methods` | `at`, `findLast`, the non-mutating twins, `groupBy` |
 | `13-15 challenges` | easy → medium → a real order dataset |
+
+## Inside topic 02 — Objects, Maps & JSON
+
+| File | Covers |
+|---|---|
+| `01-creating-and-accessing` | dot vs bracket, computed keys, `in`, nested reads |
+| `02-updating-and-deleting` | `delete`, `?.`, `??`, `??=`, safe nested access |
+| `03-iterating` | `keys`/`values`/`entries`/`fromEntries`, `mapValues`, key order |
+| `04-destructuring` | renaming, defaults, nested, rest, parameter objects |
+| `05-spread-and-merging` | shallow copy, merge precedence, `deepMerge` |
+| `06-arrays-of-objects` | find, index, group, aggregate, normalize |
+| `07-maps-and-sets` | Map vs object, object keys, memoize, set ops |
+| `08-json` | replacer/reviver, and everything JSON silently destroys |
+| `09-immutable-updates` | the React/Redux update pattern, `setIn`, a reducer |
+| `10-methods-getters-descriptors` | `this` in methods, getters/setters, freeze, `defineProperty` |
+| `11-equality-and-cloning` | write your own `deepEqual`, `diff`, `structuredClone` |
+| `12-13 challenges` | validation, camel-casing, an API payload → a view model |
+
+## Inside topic 03 — Functions, Scope & Closures
+
+| File | Covers |
+|---|---|
+| `01-declaring-functions` | declarations vs expressions vs arrows, hoisting, IIFE |
+| `02-parameters-and-arguments` | defaults, rest, `arguments`, object parameters, mutation |
+| `03-return-values` | guard clauses, tuples vs records, pure vs impure |
+| `04-scope` | block/function/global, `var` leaks, TDZ, shadowing |
+| `05-closures` | counters, private state, factories, memoize, the module pattern |
+| `06-closures-in-loops` | the `var`-in-a-loop bug and four ways to fix it (async) |
+| `07-higher-order-functions` | write your own map/filter/reduce, predicates, wrappers |
+| `08-composition-and-currying` | pipe, compose, partial, curry, tap, unary, flip |
+| `09-this-and-binding` | the dot rule, detachment, call/apply/bind, arrows as methods |
+| `10-recursion` | trees, flatten, mutual recursion, binary search, the stack limit |
+| `11-practical-utilities` | once, memoize, retry, **debounce vs throttle** (async) |
+| `12-13 challenges` | Redux, an event emitter, middleware, an LRU cache, a trampoline |
+
+## Inside topic 04 — Strings & Regex
+
+| File | Covers |
+|---|---|
+| `01-creating-and-reading` | quotes, escapes, immutability, `at()`, comparison |
+| `02-searching` | includes/indexOf, the `-1` trap, counting, highlighting |
+| `03-extracting` | slice vs substring, split with limits, parsing names and paths |
+| `04-transforming` | case, trim, pad, repeat, slug, mask, camel/snake |
+| `05-templates-and-building` | interpolation, joining lists, **tagged templates**, dedent |
+| `06-unicode-and-code-points` | why `'👍'.length` is 2, surrogate pairs, normalize, graphemes |
+| `07-regex-basics` | literals vs constructor, flags, `test`, escaping, the `lastIndex` trap |
+| `08-regex-classes-and-quantifiers` | `\d\w\s`, ranges, greedy vs lazy, anchors, `\b` |
+| `09-regex-groups` | capture, named, non-capturing, backreferences, lookaround |
+| `10-regex-replace-and-match` | `$1`/`$&`, replacer functions, `matchAll`, `exec` loops |
+| `11-12 challenges` | an .env parser, CSV with quoted fields, markdown, a tokeniser |
+
+## Inside topic 05 — Classes & Prototypes
+
+| File | Covers |
+|---|---|
+| `01-factory-functions` | building objects without `class`, and the cost of doing so |
+| `02-constructor-functions` | what `new` actually does, `new.target`, forgetting `new` |
+| `03-prototypes` | the chain, `Object.create`, shadowing, own vs inherited |
+| `04-class-basics` | class syntax, instance fields, where methods really live |
+| `05-getters-setters-and-statics` | derived values, validation, static factories and state |
+| `06-private-fields` | `#private`, WeakMaps, the underscore lie, unforgeable brands |
+| `07-inheritance` | `extends`, `super`, abstract bases, extending built-ins |
+| `08-polymorphism` | duck typing vs `instanceof`, dispatch tables, `Symbol.hasInstance` |
+| `09-built-in-protocols` | `toString`, `valueOf`, `toJSON`, iterators, generators |
+| `10-mixins-and-composition` | object and class mixins, and why composition usually wins |
+| `11-custom-errors` | error subclasses, `cause`, error families, a Result type |
+| `12-13 challenges` | implement `new` and `instanceof`, a Store, an LRU, a validator DSL |
 
 Start here:
 

@@ -27,7 +27,7 @@ function secondLast(arr) {
 }
 check('last', last([1, 2, 3]), 3);
 check('secondLast', secondLast([1, 2, 3]), 2);
-check('last of empty', () => String(last([])), 'undefined');
+check('last of empty', () => String(last([])), 'undefined', last);
 
 section('Exercise 2 — the non-mutating twins');
 /* Each returns a new array; `arr` must stay exactly as it was.

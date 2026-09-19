@@ -94,7 +94,7 @@ check('firstThree', firstThree(t6), ['a', 'b', 'c']);
 check('lastTwo', lastTwo(t6), ['d', 'e']);
 check('withoutEnds', withoutEnds(t6), ['b', 'c', 'd']);
 check('copyOf equals', copyOf(t6), t6);
-check('copyOf is a NEW array', copyOf(t6) !== t6, true);
+check('copyOf is a NEW array', () => copyOf(t6) !== t6, true, copyOf);
 check('original untouched', t6, ['a', 'b', 'c', 'd', 'e']);
 
 section('Exercise 7 — merge (non-mutating)');

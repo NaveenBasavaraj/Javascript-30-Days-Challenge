@@ -87,7 +87,7 @@ function renameUser(users, id, name) {
 const USERS = [{ id: 1, name: 'Asha' }, { id: 2, name: 'Ben' }];
 check('renamed', renameUser(USERS, 2, 'Benny'), [{ id: 1, name: 'Asha' }, { id: 2, name: 'Benny' }]);
 check('original untouched', USERS[1].name, 'Ben');
-check('untouched objects are reused', () => renameUser(USERS, 2, 'Benny')[0] === USERS[0], true);
+check('untouched objects are reused', () => renameUser(USERS, 2, 'Benny')[0] === USERS[0], true, renameUser);
 
 section('Exercise 6 — deep copy');
 /* Return a copy so deep that mutating any nested part of the copy
@@ -122,7 +122,7 @@ function freeze(arr) {
   // your code here
 }
 check('freeze returns the array', freeze([1]), [1]);
-check('frozen', () => Object.isFrozen(freeze([1])), true);
+check('frozen', () => Object.isFrozen(freeze([1])), true, freeze);
 
 section('PREDICTIONS');
 

@@ -87,7 +87,7 @@ function lastEven(nums) {
   // your code here
 }
 check('lastEven', lastEven([1, 4, 5, 8, 9]), 8);
-check('lastEven none', () => String(lastEven([1, 3])), 'undefined');
+check('lastEven none', () => String(lastEven([1, 3])), 'undefined', lastEven);
 
 section('Exercise 7 — countOccurrences');
 /* How many times does `value` appear?

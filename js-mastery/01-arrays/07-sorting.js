@@ -122,7 +122,7 @@ function shuffle(arr) {
 }
 const src9 = [1, 2, 3, 4, 5];
 check('same items', () => [...shuffle(src9)].sort((a, b) => a - b), [1, 2, 3, 4, 5]);
-check('returns a new array', () => shuffle(src9) !== src9, true);
+check('returns a new array', () => shuffle(src9) !== src9, true, shuffle);
 check('input untouched', src9, [1, 2, 3, 4, 5]);
 
 section('PREDICTIONS');

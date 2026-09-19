@@ -20,7 +20,8 @@ let gPassed = 0, gTotal = 0;
 
 for (const topic of topics) {
   console.log(`\n${C.b}${topic}${C.o}`);
-  const files = fs.readdirSync(path.join(root, topic)).filter((f) => f.endsWith('.js')).sort();
+  const files = fs.readdirSync(path.join(root, topic))
+      .filter((f) => f.endsWith('.js') || f.endsWith('.mjs')).sort();
   for (const file of files) {
     let out = '';
     try {

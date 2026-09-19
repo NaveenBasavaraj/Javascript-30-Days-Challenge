@@ -75,7 +75,7 @@ function withExtra(arr, x) {
 }
 const t6 = [1, 2];
 check('copy equal', copy(t6), [1, 2]);
-check('copy is new', () => copy(t6) !== t6, true);
+check('copy is new', () => copy(t6) !== t6, true, copy);
 check('mergeAll', mergeAll([1], [2, 3], [4]), [1, 2, 3, 4]);
 check('withExtra', withExtra(t6, 3), [1, 2, 3]);
 check('withExtra did not mutate', t6, [1, 2]);
